@@ -5,6 +5,7 @@ import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
 import useMenu from "../../../Hooks/useMenu";
 import FoodCart from "../../Shered/FoodCart/FoodCart";
+import { Helmet } from "react-helmet-async";
 
 const Order = () => {
   const [tabIndex, setTabIndex] = useState(0);
@@ -16,6 +17,9 @@ const Order = () => {
   const drinks = menuData?.filter((item) => item.category === "drinks");
   return (
     <div className="my-20">
+      <Helmet>
+        <title>Bistro Boss || order food</title>
+      </Helmet>
       <Cover img={orderImg} title={"Order here"}></Cover>
       <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
         <TabList>

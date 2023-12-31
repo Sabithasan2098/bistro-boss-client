@@ -12,7 +12,9 @@ const FoodCart = ({ cartData }) => {
         <h2 className="card-title">{name}</h2>
         <p>{recipe}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+          <button className="btn btn-outline border-0 border-b-4 bg-gray-100 border-orange-500 text-orange-400">
+            Add to cart
+          </button>
         </div>
       </div>
     </div>
